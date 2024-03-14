@@ -33,11 +33,21 @@ const Country = ({country, handelVisitedCountries}) => {
 
 
             <hr />
+            <div className=" flex justify-between gap-2 text-white">
 
-            <button onClick={passWithParams}>Mark as visited</button>
-            <button onClick={handelVisited}>{visited ? 'Visited' : 'Going'} </button>
+                <div className="">
+                <button onClick={passWithParams}>Mark as visited</button>
+                </div>
+            
+                <div className="">
+                <button onClick={handelVisited}>{visited ? 'Visited' : 'Going'} </button>
             {visited ? 'I Have Visited this Country' : 'I Want to visite'}
 
+
+                </div>
+            
+            </div>
+            
             <hr />
 
             <CountryDetail>
