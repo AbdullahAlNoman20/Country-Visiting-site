@@ -24,31 +24,34 @@ const Country = ({country, handelVisitedCountries}) => {
 
     return (
         <div className={`Country ${visited ? 'visited' :'Non-visited'}`}>
-            <h3>Name : {name?.common}</h3>
+            <h3 className='font-bold mb-5'>Name : {name?.common}</h3>
             <img src={flags.png} alt="" />
-            <p>population: {population}</p>
+            <p>Population: {population}</p>
             <p>Capita:{capital}</p>
             <p>Area: {area}</p>
             <p><small>Code:{cca3}</small></p>
 
 
-            <hr />
-            <div className=" flex justify-between gap-2 text-white">
+            <hr className='' />
+            <div className=" flex gap-2 text-white py-5">
 
                 <div className="">
-                <button onClick={passWithParams}>Mark as visited</button>
+                <button className='btn btn-xs btn-warning pb-5' onClick={passWithParams}>Mark as visited</button>
                 </div>
             
                 <div className="">
-                <button onClick={handelVisited}>{visited ? 'Visited' : 'Going'} </button>
-            {visited ? 'I Have Visited this Country' : 'I Want to visite'}
 
+                <button className='btn btn-xs btn-warning mr-5 pb-5' 
+                onClick={handelVisited}>{visited ? 'Visited' : 'Going'} 
+                </button>
+
+                {visited ? 'I Have Visited this Country' : 'I Want to visit'}
 
                 </div>
             
             </div>
             
-            <hr />
+            <hr className='' />
 
             <CountryDetail>
                 country = {country}

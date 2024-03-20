@@ -36,10 +36,11 @@ const Countries = () => {
     return (
 
         <div className="">
-             <h3 className=" bg-gray-50 rounded-lg m-5 p-5">Total Countries: {countries.length}</h3>
-
+             
         <div className=" bg-gray-50 rounded-lg m-5 p-5">
-            <h3 className="text-3xl font-bold">Visited Country: {visitedCountries.length} </h3>
+            <h3 className=" text-3xl font-bold m-5 p-5">Total Countries: {countries.length}</h3>
+            <hr />
+            <h3 className="text-2xl font-bold my-5">Visited Country: {visitedCountries.length} </h3>
             <ul>
                 {
                 visitedCountries.map(country => <p 
