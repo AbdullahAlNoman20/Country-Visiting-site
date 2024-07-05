@@ -5,23 +5,21 @@ import './Countries.css'
 
 const Countries = () => {
 
+    // Countries gula rakhar Jonno State Declare kortaci.
     const[countries, setCountries] = useState([]);
 
-    const[visitedCountries, setVisitedCountries] = useState([]);
-
-
     useEffect(() =>{
-
 
         fetch('https://restcountries.com/v3.1/all')
 
         .then( res => res.json())
+        // .then(data => console.log(data));
         .then(data => setCountries(data));
-
-        
 
     },[])
 
+    // Je sob country visite korechi segulo rakhte
+    const[visitedCountries, setVisitedCountries] = useState([]);
 
     const handelVisitedCountries = country =>{
 
@@ -30,7 +28,7 @@ const Countries = () => {
 
         const newVisitedCountries = [...visitedCountries, country];
         setVisitedCountries(newVisitedCountries);
-    }
+    } 
 
 
     return (
@@ -50,7 +48,7 @@ const Countries = () => {
             </ul>
         </div>
         
-        <div className="country-container">
+        <div className="country-container  lg:grid-cols-3">
            
             {
 
